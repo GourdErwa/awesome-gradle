@@ -19,7 +19,6 @@ spotbugs {
     //includeFilter.set(file("include.xml"))
     //excludeFilter.set(file("exclude.xml"))
     //baselineFile.set(file("baseline.xml"))
-    onlyAnalyze.set(listOf("com.hoteamsoft.*", "com.hoteam.*"))
     maxHeapSize.set("1g")
 }
 

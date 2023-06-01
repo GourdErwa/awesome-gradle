@@ -23,12 +23,12 @@ publishing {
                 artifactId = base.archivesName.get()
 
                 pom.description.set(
-                    project.description ?: "HoteamSoft Application."
+                    project.description ?: "Groud Application."
                 )
             }
 
             pom {
-                name.set("HoteamSoft Application")
+                name.set("Groud Application")
                 //url.set("https://github.com/Microsoft/ApplicationInsights-Java")
 
                 licenses {
@@ -40,8 +40,8 @@ publishing {
 
                 developers {
                     developer {
-                        id.set("HoteamSoft")
-                        name.set("HoteamSoft")
+                        id.set("Groud")
+                        name.set("Groud")
                     }
                 }
 

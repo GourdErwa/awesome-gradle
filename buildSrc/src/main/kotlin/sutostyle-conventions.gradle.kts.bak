@@ -29,7 +29,6 @@ plugins.withId("java") {
             // licenseHeaderFile(licenseHeaderFile)
             importOrder(
                 "static ",
-                "com.hoteamsoft.",
                 "",
                 "java.",
                 "javax."
