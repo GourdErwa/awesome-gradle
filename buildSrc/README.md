@@ -1,0 +1,1 @@
+by https://github.com/microsoft/ApplicationInsights-Java

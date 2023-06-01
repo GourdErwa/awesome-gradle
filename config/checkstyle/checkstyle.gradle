@@ -1,0 +1,27 @@
+apply plugin: 'checkstyle'
+check.dependsOn 'checkstyle'
+
+checkstyle {
+  toolVersion = '9.3'
+  //toolVersion = '10.3.3' // 10.0 版本 JDK 要求 11+
+}
+
+tasks.register('checkstyle', Checkstyle) {
+  description = "Check Java style with Checkstyle"
+  configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
+  configProperties = [
+    "checkstyle.suppressions.file": file("${rootDir}/config/checkstyle/suppressions.xml"),
+    //"checkstyle.header.file"      : project.file("config/license/HEADER_JAVA")
+  ]
+  source "${rootDir}/src"
+  include '**/*.java'
+  exclude '**/gen/**'
+  classpath = files()
+  ignoreFailures = true
+  showViolations = false
+  reports {
+    xml.required = false
+    html.required = true
+    html.outputLocation = file("${project.buildDir}/reports/checkstyle/checkstyle.html")
+  }
+}
