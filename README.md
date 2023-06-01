@@ -1,0 +1,3 @@
+# awesome-gradle
+
+Gradle example.
